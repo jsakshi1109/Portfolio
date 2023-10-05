@@ -1,6 +1,5 @@
 import React from 'react'
 import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
@@ -9,12 +8,14 @@ import { useTheme } from 'styled-components';
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
+  const firebaseLogoUrl = "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/briefcase.png?alt=media&token=5813b1e4-8da0-42e7-bdcb-e49820c32ac2";
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
           <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+            <img src={firebaseLogoUrl} alt="Logo" style={{ width: '3rem', marginRight: '1rem' }} />
+            <Span>Portfolio</Span>
           </a>
         </NavLogo>
         <MobileIcon>
@@ -50,7 +51,7 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

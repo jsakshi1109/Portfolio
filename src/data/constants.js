@@ -8,7 +8,7 @@ export const Bio = {
     "Programmer",
   ],
   description:
-    "I'm Sakshi, a motivated individual aspiring to secure an entry-level position in technology, with a interest on front-end development. My true passion lies in crafting user-friendly experiences, and I'm thrilled at the opportunity to contribute to your company's objectives. Not only am I enthusiastic about applying my skills, but I'm also eager to expand my knowledge and embrace new technologies. Let's collaborate to innovate and create exceptional digital experiences! ",
+    "I'm a dedicated developer fascinated by the art of crafting user-friendly digital experiences. With a fervor for innovation, I embark on a mission to contribute my skills to diverse tech projects. Let's collaborate and transform ideas into extraordinary online realities. ",
   github: "https://github.com/jsakshi1109",
   resume:
     "https://drive.google.com/file/d/18g7zWXmO8Vpqec2_Vl5myDX8knYRmdgU/view?usp=sharing",

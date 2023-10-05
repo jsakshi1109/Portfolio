@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import _default from "../../themes/default";
+import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -10,18 +9,15 @@ export const HeroContainer = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
-
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
 export const HeroBg = styled.div`
   position: absolute;
-  display: flex;
-  justify-content: end;
   top: 0;
   right: 0;
   bottom: 0;
@@ -33,12 +29,9 @@ export const HeroBg = styled.div`
   padding: 0 30px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
   @media (max-width: 960px) {
-    justify-content: center;
-    padding: 0 0px;
+    padding: 0;
   }
 `;
 
@@ -49,67 +42,53 @@ export const HeroInnerContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
-
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
+
 export const HeroLeftContainer = styled.div`
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   order: 1;
+  width: 100%;
+  max-width: 400px;
   @media (max-width: 960px) {
     order: 2;
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-
   @media (max-width: 640px) {
     order: 2;
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 `;
 
 export const HeroRightContainer = styled.div`
   width: 100%;
+  max-width: 600px;
   display: flex;
-  order: 2;
-  justify-content: end;
+  flex-direction: column;
   gap: 12px;
+  order: 2;
+  align-items: left;
+  
   @media (max-width: 960px) {
     order: 1;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  @media (max-width: 640px) {
+    justify-content: left;
     margin-bottom: 30px;
+  }
+  
+  @media (max-width: 640px) {
+    margin-bottom: 20px;
   }
 `;
 
 export const Img = styled.img`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
-
-  @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 400px;
-  }
-
-  @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
-  }
 `;
 
 export const Title = styled.div`
@@ -117,14 +96,11 @@ export const Title = styled.div`
   font-size: 50px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
+  text-align: left;
+  margin-bottom: 8px;
   @media (max-width: 640px) {
     font-size: 40px;
     line-height: 48px;
-    margin-bottom: 8px;
   }
 `;
 
@@ -135,14 +111,8 @@ export const TextLoop = styled.div`
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-  @media (max-width: 640px) {
-    font-size: 22px;
-    line-height: 48px;
-    margin-bottom: 16px;
-  }
+  text-align: center;
+  margin-bottom: 16px;
 `;
 
 export const Span = styled.span`
@@ -154,12 +124,8 @@ export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
+  color: ${({ theme }) => theme.text_primary};
+  text-align: left;
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 32px;
@@ -167,37 +133,25 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 12px 0;
+  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.primary};
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-
+  }
+  @media (max-width: 640px) {
+    padding: 10px 0;
+    font-size: 16px;
+  }
 `;
+
