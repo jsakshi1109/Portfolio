@@ -35,7 +35,7 @@ function App() {
       <Router>
         <Navbar />
         <Body>
-          <HeroSection /> {/* Text inside HeroSection component can be changed */}
+          <HeroSection />
           <Wrapper>
             <Skills />
             <Experience />
