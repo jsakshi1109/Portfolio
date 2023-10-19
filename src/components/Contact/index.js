@@ -1,6 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useRef } from 'react';
+import React, { useState, useRef } from 'react';
+import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
 
@@ -120,48 +119,62 @@ const ContactButton = styled.input`
   font-weight: 600;
 `
 
-
-
 const Contact = () => {
-
-  //hooks
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [error, setError] = useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_f8rmclg', 'template_kmu4mz5', form.current, 'M_H8ZmTIg1lyejP9p')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+    const { from_email, from_name, subject, message } = form.current.elements;
+
+    if (!from_email.value || !from_email.value.includes('@')) {
+      setError('Invalid email address');
+      return;
+    }
+
+    const emailParams = {
+      from_name: from_name.value,
+      from_email: from_email.value,
+      subject: subject.value,
+      message: message.value
+    };
+
+    emailjs
+      .sendForm('service_f8rmclg', 'template_kmu4mz5', form.current, 'M_H8ZmTIg1lyejP9p')
+      .then(
+        (result) => {
+          setOpen(true);
+          form.current.reset();
+          setError('');
+        },
+        (error) => {
+          console.error('Failed to send email:', error);
+          setError('Failed to send email. Please try again later.');
+        }
+      );
+  };
 
   return (
     <Container>
-      <Wrapper>
-        <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-      </Wrapper>
+      <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactTitle>Email Me 🚀</ContactTitle>
+        <ContactInput placeholder="Your Email" name="from_email" />
+        <ContactInput placeholder="Your Name" name="from_name" />
+        <ContactInput placeholder="Subject" name="subject" />
+        <ContactInputMessage placeholder="Message" rows="4" name="message" />
+        {error && <div style={{ color: 'red' }}>{error}</div>}
+        <ContactButton type="submit" value="Send" />
+      </ContactForm>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={() => setOpen(false)}
+        message="Email sent successfully!"
+        severity="success"
+      />
     </Container>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
