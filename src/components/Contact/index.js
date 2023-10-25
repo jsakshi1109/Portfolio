@@ -127,9 +127,16 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { from_email, from_name, subject, message } = form.current.elements;
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!from_email.value || !from_email.value.includes('@')) {
+    if (!from_email.value || !emailRegex.test(from_email.value)) {
       setError('Invalid email address');
+      return;
+    }
+
+    if (!from_name.value || !subject.value || !message.value) {
+      setError('Please fill out all fields');
       return;
     }
 
