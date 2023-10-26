@@ -11,7 +11,7 @@ export const Bio = {
     "I'm a dedicated developer fascinated by the art of crafting user-friendly digital experiences. With a fervor for innovation, I embark on a mission to contribute my skills to diverse tech projects. Let's collaborate and transform ideas into extraordinary online realities. ",
   github: "https://github.com/jsakshi1109",
   resume:
-    "https://drive.google.com/file/d/1B9fOd3yt8YTQQXyVRc8XbxuuPysQTEXw/view?usp=drive_link",
+    "https://drive.google.com/file/d/1Ck0BhbjseDu2LXmmfmg0OZe5KNFXAiID/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/sakshijain2003/",
   twitter: "",
   insta: "https://www.instagram.com/jsakshi1193/",
