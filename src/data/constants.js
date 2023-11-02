@@ -205,6 +205,42 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "Food2Rescue",
+    date: "Jul 2023 - Present",
+    description:
+      "Food2Rescue is an innovative Android application designed to bridge the gap between food service providers and volunteers. By leveraging technology, it efficiently connects surplus meals from restaurants and food businesses with volunteers willing to redistribute these meals to those in need. This initiative not only combats food waste but also addresses the issue of hunger in communities. Food2Rescue stands as a powerful solution, fostering a sustainable approach to food distribution and reducing food wastage significantly.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/food%202%20rescue%20-%20img.jpg?alt=media&token=a0fbb343-6325-4601-ae8e-285ca1e21722",
+    tags: ["Android Studio", "XML", "Kotlin", "Amazon Web Services"],
+    category: "Android app",
+    github: ""
+  },
+  {
+    id: 1,
+    title: "Play Wave",
+    date: "Jul 2023 - Aug 2023",
+    description:
+      "This multimedia application, built using XML for user interface design and Java for backend functionality, offers a seamless experience for audio and video playback. The app boasts essential features and controls, ensuring users can enjoy their favorite media content effortlessly. With an intuitive interface crafted in XML and robust functionality powered by Java, the app provides reliable audio and video playback, making it a go-to choice for users seeking a straightforward and efficient multimedia solution.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/play%20wave%20img.jpg?alt=media&token=68594737-ec13-4c55-b32c-65006c7fb4bc",
+    tags: ["Android Studio", "XML", "Java"],
+    category: "Android app",
+    github: "https://github.com/jsakshi1109/EntertainmentApp"
+  },
+  {
+    id: 2,
+    title: "Quiz Android Application",
+    date: "Oct 2023",
+    description:
+      "I'm excited to introduce our innovative quiz app, thoughtfully developed with XML for a seamless user interface and Java for powerful backend operations. It features a variety of subjects and a distinctive flag card system, enhancing user engagement and knowledge enrichment. With a user-friendly design, it's perfect for those seeking an interactive and educational quiz experience.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/quiz%20app.png?alt=media&token=2735c0ee-6312-425a-b4ef-105a37b8e213",
+    tags: ["Android Studio", "XML", "Java","SQLite"],
+    category: "website",
+    github: "https://github.com/jsakshi1109/QuizAndroidApplication",
+  },
+  {
+    id: 3,
     title: "House of Wears",
     date: "Jan 2023 - Apr 2023",
     description:
@@ -216,7 +252,7 @@ export const projects = [
     github: "https://github.com/jsakshi1109/HouseOFWears",
   },
   {
-    id: 1,
+    id: 4,
     title: "Sanskriti - Culture of India",
     date: "Jan 2023 - Apr 2023",
     description:
@@ -229,29 +265,5 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/jsakshi1109/Sanskriti",
-  },
-  {
-    id: 2,
-    title: "Food2Rescue",
-    date: "Jul 2023 - Present",
-    description:
-      "Food2Rescue is an innovative Android application designed to bridge the gap between food service providers and volunteers. By leveraging technology, it efficiently connects surplus meals from restaurants and food businesses with volunteers willing to redistribute these meals to those in need. This initiative not only combats food waste but also addresses the issue of hunger in communities. Food2Rescue stands as a powerful solution, fostering a sustainable approach to food distribution and reducing food wastage significantly.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/food%202%20rescue%20-%20img.jpg?alt=media&token=a0fbb343-6325-4601-ae8e-285ca1e21722",
-    tags: ["Android Studio", "XML", "Kotlin", "Amazon Web Services"],
-    category: "Android app",
-    github: ""
-  },
-  {
-    id: 3,
-    title: "Play Wave",
-    date: "Jul 2023 - Present",
-    description:
-      "This multimedia application, built using XML for user interface design and Java for backend functionality, offers a seamless experience for audio and video playback. The app boasts essential features and controls, ensuring users can enjoy their favorite media content effortlessly. With an intuitive interface crafted in XML and robust functionality powered by Java, the app provides reliable audio and video playback, making it a go-to choice for users seeking a straightforward and efficient multimedia solution.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/play%20wave%20img.jpg?alt=media&token=68594737-ec13-4c55-b32c-65006c7fb4bc",
-    tags: ["Android Studio", "XML", "Java"],
-    category: "Android app",
-    github: "https://github.com/jsakshi1109/EntertainmentApp"
   }
 ];
