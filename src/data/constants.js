@@ -157,6 +157,21 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-c7d28.appspot.com/o/logo%20company.png?alt=media&token=646738a7-8524-4d04-a61c-91f6e15505d8",
+    role: "Software Engineer Intern",
+    company: "Simplify3x",
+    date: "Dec 2023 - Present",
+    desc: "Currently working as a Software Engineer Intern to create the website using HTML and CSS, alongside doing the UIUX Designing of the website.",
+    skills: [
+      "Figma",
+      "HTML",
+      "CSS",
+      "UI/UX Designing"
+    ],
+    doc: "",
+  },
+  {
+    id: 1,
     img: "",
     role: "Software Development Intern",
     company: "MindAgile Consulting",
